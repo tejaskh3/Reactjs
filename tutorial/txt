@@ -1,0 +1,18 @@
+1.this was not working with npm start,
+ so changed start to "start": "react-scripts --openssl-legacy-provider start" in scripts.
+Reason For The Error
+
+In Node.js v17, the Node.js developers closed a security hole in the SSL provider. This fix was a breaking change that corresponded with similar breaking changes in the SSL packages in NPM. When you attempt to use SSL in Node.js v17 or later without also upgrading those SSL packages in your package.json, then you will see this error
+
+while changing the title, even after getting changes in title value, the changes wasn't visisble on the screen becasuse we need to do rerender that for having changes on screen.
+
+// something about hooks -> use state is an array,  componenet name must be uppercase,must be in the finction/ component body,  cannot call conditionally ,
+
+solving th problem of mutli state varaibles
+used split operator to change the message property of an object
+ setPerson({...person, message:"message changed"})
+
+use effect
+The useEffect Hook allows you to perform side effects in your components.
+
+render-> use effect ->render -> clean up -> another use effect.
